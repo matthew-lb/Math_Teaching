@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amsthm, amssymb, etoolbox}
+\usepackage[inline]{enumitem}
+\usepackage[margin=1.25in]{geometry}
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+
+
+\begin{document}
+
+\title{Symmetric Polynomials \\ (Boot camp)}
+\date{}
+\maketitle
+\vspace{-50 pt}
+
+\section{Main Ideas}
+\begin{enumerate}
+\item If $f$ is a symmetric polynomial in the variables $x_1,x_2,\ldots, x_n$, then it can be expressed as a sum of products of elementary symmetric polynomials in those variables.
+\item (Newton's Sums) Let $x_1,x_2,\ldots, x_n$ be the roots of $P(x)=x^n+a_{n-1}x^{n-1}+\cdots+a_0$.
+\begin{itemize}
+\item If $r\le n$, then $s_r+a_{n-1}s_{r-1}+\cdots a_{n-r+1}s_{1}+na_{n-r}=0$
+\item If $r > n$, then $s_r+a_{n-1}s_{r-1}+\cdots a_{0}s_{r-n}=0$
+\end{itemize}
+\item Other Techniques: Factoring, Polynomial Transformations, Plugging values into polynomial
+\end{enumerate}
+
+
+\section{Lecture}
+\begin{enumerate}
+\item Let $a,b,c$ be the roots of $x^3+ax^2+bx+c$. Find $\displaystyle\sum_{\text{sym}}a^2$, $\displaystyle\sum_{\text{sym}}a^2b$, and $\displaystyle\sum_{\text{sym}} \frac{a}{b}$.
+\item Let $P(x)= x^3 + x^2 + x + 1$ have roots $a,b,c$. Find the polynomials with roots $\{a-1, b-1, c-1\}$, $\{\frac{1}{a}, \frac{1}{b}, \frac{1}{c}\}$, and $\{\frac{1}{a-1}, \frac{1}{b-1}, \frac{1}{c-1}\}$.
+\item Find a constructive proof of Main Idea 1 and use it to find $\displaystyle\sum_{\text{sym}}a^2$, $\displaystyle\sum_{\text{sym}}a^2b$
+\item Let $P(x)=x^4 + 2x^2 + x + 1$. Find the sum of the squares and cubes of the roots of $P$.
+\item Let $P(x) = x^2 + x + 3$. Find the sum of the 4th powers of the roots.
+\item Given $a+b+c=6$, $ab+bc+ca = 11$, $abc=6$, find $a,b,c$.
+\end{enumerate}
+
+
+\section{Problems}
+\begin{enumerate}
+\item Find the sums of the cubes of the roots of $x^3+2x^2+x+1$ in two ways.
+\item Let $a+b+c=12$, $a^2+b^2+c^2=50$, and $a^3+b^3+c^3=168$. Find $a,b,c$
+\item Let $a,b,c$ be the roots of $P(x)=x^3+2x^2+3x+1$. Find \vspace{20 pt}\\
+\begin{enumerate*}
+\item $\displaystyle\sum_{\text{sym}} \frac{1}{b-1}$ \; \; \; \;
+\item $\displaystyle\sum_{\text{sym}} a^4$ \; \; \; \;
+\item $\displaystyle\sum_{\text{sym}} \frac{a}{b^2}$ \; \; \; \;
+\item $\displaystyle\sum_{\text{sym}} \frac{a}{b-1}$ \\
+\end{enumerate*}
+\item Find the sum of the 20th powers of the roots of $z^{20}-19z-1$.
+\item Let $a$ and $b$ be real numbers, and let $r,s,$ and $t$ be the roots of $f(x)=x^3+ax^2+bx-1.$ Also, $g(x)=x^3+mx^2+nx+p$ has roots $r^2,s^2,$ and $t^2$. If $g(-1)=-5$, find the maximum possible value of $b$. 
+\item Find all possible triples of real numbers $(x,y,z)$ satisfying
+\begin{align*}
+x^2y+y^2z+z^2x &= -1 \\
+xy^2 + yz^2 + zx^2 &= 5 \\
+xyz &= -2
+\end{align*}
+\item The complex numbers $\alpha_1, \alpha_2, \alpha_3, \alpha_4$ are the four distinct roots of the equation $x^4+2x^3+2=0$. Determine the unordered set 
+\begin{equation*}
+\{\alpha_1\alpha_2 + \alpha_3\alpha_4, \alpha_1\alpha_3 + \alpha_2\alpha_4, \alpha_1\alpha_4 + \alpha_2\alpha_3\}\
+\end{equation*}
+\end{enumerate}
+\end{document}
