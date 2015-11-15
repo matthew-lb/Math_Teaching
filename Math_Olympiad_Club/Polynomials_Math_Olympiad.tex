@@ -1,0 +1,100 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+%%%%Theorem + Equation Styles%%%%%%%
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{fact}{Fact}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[subsection]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[subsection]
+
+\newenvironment{solution}
+               {\let\oldqedsymbol=\qedsymbol%
+                \def\@addpunct##1{}%
+                \renewcommand{\qedsymbol}{$\blacktriangleleft$}%
+                \begin{proof}[\bfseries\upshape Solution]}%
+               {\end{proof}%
+                \renewcommand{\qedsymbol}{\oldqedsymbol}}   %%%Taken from Evan Chen
+                
+                               
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%New Commands%%%%%%%%%
+\newcommand{\ddt}[1][t]{\frac{d}{d#1}}
+
+\newcommand{\ddtn}[2][t]{\frac{d^{#2}}{d{#1}^{#2}}}
+					
+		
+\newcommand{\pddt}[1][t]{\frac{\partial}{\partial #1}}
+
+\newcommand{\pddtn}[2][t]{\frac{\partial^{#2}}{\partial {#1}^{#2}}}
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+
+\newcommand{\nullsp}[0]{null}
+
+\newcommand{\lcm}[0]{\text{lcm}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+
+\lhead{Integer Polynomials}
+\rhead{\thepage}
+\cfoot{}
+
+
+\begin{document}
+
+\title{Integer Polynomials}
+\author{Matthew Lerner-Brecher}
+\maketitle
+
+\section{Important Facts}
+\begin{enumerate}
+\item If $P(x)$ is an integer polynomial, then for all distinct $a,b\in\bb{Z}$ we have $a-b|P(a)-P(b)$.
+\item If $P(a)=0$ then there exists a polynomial $Q$ such that 
+\[P(x)=(x-a)Q(x)\]
+\item For any polynomials $P,S$ there exists polynomials $Q,R$ where $\deg R < \deg S$ such that 
+\[P(x)=S(x)Q(x)+R(x)\]
+\item (Rational Root Theorem) If $P(x)=a_nx^n+\cdots+a_0$ is a polynomial with integer coefficients and $a,b$ are relatively prime integers satisfying $P(\frac{a}{b})=0$, then $a|a_0$ and $b|a_n$.
+\item (Eisenstein's Criterion) Let $P(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$ be a polynomial with integer coefficients. If there exists a prime $p$ such that $p\nmid a_n$, for $n-1\le i\ge0,  p|a_i$ and $p^2\nmid a_0$, then $P$ is irreducible over the rationals.
+\item If an integer polynomial $P$ is reducible over the rationals, then it is also reducible over the integers.
+\end{enumerate}
+\section{Problems}
+\begin{enumerate}
+\item (USAMO 1974) Let $a,b,c$ be three distinct integers, and let $P(x)$ be a polynomial with integer coefficients. Show that we cannot have $P(a)=b, P(b)=c, P(c)=a$
+\item Show that for all primes $p$ the polynomial $x^{p-1}+x^{p-2}+\cdots+x+1$ is irreducible over the rationals
+\item Suppose an integer polynomial $P$ takes on values $\pm 1$ at three different integer points. Show that $P$ has no integer roots.
+\item (BAMO 2004) Find with proof all monic polynomials $f(x)$ with integer coefficients that satisfy
+\begin{itemize}
+\item $f(0) = 2004$
+\item If $x$ is irrational, then $f(x)$ is also irrational.
+\end{itemize}
+\item Show that the polynomial $(x^2+x)^{2^n}$ + 1 is irreducible
+\item If $a_1, a_2, \ldots, a_n$ are distinct integers, prove that the polynomial $P(x)=(x-a_1)(x-a_2)\cdots(x-a_n)-1$ is irreducible over the integers.
+\item (IMO 2006) Let $P(x)$ be a polynomial of degree $n > 1$ with integer coefficients and let $k$ be a positive integer. Consider the polynomial $Q(x) = P(P(\ldots P(P(x)) \ldots ))$, where $P$ occurs $k$ times. Prove that there are at most $n$ integers $t$ such that $Q(t) = t$.
+\item Let $n>1$ be an integer. Show that the polynomial $x^n+5x^{n-1}+3$ is irreducible over the integers.
+\item Let $P(x) = a_0x^n+a_1x^{n-1} + \cdots + a_n$ be a non zero polynomial with integer coefficient such there $P(s) = P(r) = 0$ for some integers $r,s$ with $0 < r < s$. Prove that there exists a $k$ such that $a_k \le -s$.
+\item (BAMO 2012) Find all non-zero polynomials $P(x)$ that satisfy the following property: whenever $a,b$ are relatively prime then $P(a),P(b)$ are also relatively prime.
+\item (USA TST 2010) Let $P$ be a polynomial with integer coefficients such that $P(0)=0$ and
+\[\gcd(P(0), P(1), P(2), \ldots ) = 1.\]
+Show there are infinitely many $n$ such that
+\[\gcd(P(n)- P(0), P(n+1)-P(1), P(n+2)-P(2), \ldots) = n.\]
+\item (USAMO 2002) Prove that for any integer $n$, there exists a unique polynomial $Q$ with coefficients in $\{0,1,\ldots,9\}$ such that $Q(-2) = Q(-5) = n$.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\DeclareMathOperator{\rad}{rad}
+\begin{document}
+$\centerline{\Large \textbf{Arithmetic Functions}}$
+\\
+\\
+\\
+$\large \textbf{0) Multiplicative Functions:}$  \\
+\\
+Definition: $f$ is a multiplicative if for any relatively prime positive integers $a,b$ we have $f(ab)=f(a)f(b)$.
+\\
+\\
+$\large \textbf{1) Important Multiplicative Functions} \footnote{Examples 1a and 3a will be presented in class}$:  \\
+\\
+For all of the following it is assumed that the prime factorization of $n$ is $p_1^{e_1}p_2^{e_2}\ldots p_n^{e_n}$
+\begin{enumerate}
+  \item $\sigma(n)$=sum of the divisors of $n$
+  \begin{enumerate}
+    \item $\sigma(n)=\frac{p_1^{e_1+1}-1}{p_1-1}\frac{p_2^{e_2+1}-1}{p_2-1}\cdots\frac{p_n^{e_n+1}-1}{p_n-1}$
+  \end{enumerate}
+  \item $\tau(n)=d(n)$=the number of factors of $n$
+  \begin{enumerate}
+    \item $\tau(n)=(e_1+1)(e_2+1)\cdots(e_n+1)$
+  \end{enumerate}
+  \item $\phi(n)$= number of integers less than $n$ which are relatively prime to $n$
+   \begin{enumerate}
+    \item $\phi(n)=n(1-\frac{1}{p_1})(1-\frac{1}{p_2})\cdots(1-\frac{1}{p_n})$
+  \end{enumerate}
+\end{enumerate}
+$\large \textbf{2) Problems:}$  \\
+\\
+1) The only prime factors of an integer $n$ are 2 and 3. If $\sigma(n)=1815$, find $n$. 
+\\
+\\
+2) Find all $n$ such that $\sigma(n)=n+6$.
+\\
+\\
+3) Prove the formula given for $\tau(n)$
+\\
+\\
+4) How many positive integer divisors of $2004^{2004}$ are divisible by exactly 2004 positive integers (To spare you the calculations: $2004=2\cdot3\cdot167$). 
+\\
+\\
+5) Define $S(n)$ by $S(n)=\tau(1)+ \tau(2) + \ldots + \tau(n)$. Let a denote the number of positive integers $n \leq 2005$ with $S(n)$ odd, and let $b$ denote the number of positive integers $n \leq 2005$ with $S(n)$ even. Find $a$ and $b$.
+\\
+\\
+6) Find all positive integers $n$ such that $\tau(n)^2=2n$ 
+\\
+\\
+7) Prove that if $n>6$ then $\phi(n)\ge\sqrt{n}$. (Challenge: Prove that for all $\epsilon < 1$, there exists some $M$ such that for all $n\ge M$ we have $\phi(n)\ge n^{\epsilon}$)
+\\
+\\
+8) Prove that if $f$ is a multiplicative function then so is $F(n)=\displaystyle\sum_{d|n} f(d)$
+\\
+\\
+9) The M$\ddot{\text{o}}$bius function $\mu(n)$ is defined as follows \footnote{If you want to read more about the M$\ddot{\text{o}}$bius function and dirichlet convolutions you should go to these links: \url{www.artofproblemsolving.com/Resources/Papers/SatoNT.pdf} and \url{http://www.math.upenn.edu/~wilf/gfology2.pdf} . If you know some group theory you should also check out this link: \url{https://www.math.hmc.edu/~benjamin/papers/SuryLetter.pdf}}
+\[
+ \mu(x) =
+  \begin{cases}
+   1 & \text{if } n=1 \\
+   0       & \text{if } p^2|n \text{ for some prime } p \\
+   (-1)^r  & \text{if } n=p_1p_2\ldots p_r \text{ for distinct } p_i
+  \end{cases}
+\]
+Prove that if $n>1$
+\begin{equation*}
+\displaystyle\sum_{d|n} \mu(d) = 0
+\end{equation*}
+10) Find all odd integers $n\le 5000$ such that $n|\phi(n)\tau(n)$.
+\\
+\\
+11) Find the largest integer $k$ such that $\phi(\sigma(2^k))=2^k$ (Hint: $641|2^{32}+1$).
+\\
+\\
+12) Prove that if $\sigma(N)=2N+1$, then $N$ is the square of an odd integer 
+\\
+\\
+13) Show that $\phi(n)+\sigma(n)\ge 2n$
+\\
+\\
+14) Determine all positive integers $m$ for which there exists a positive integer $n$ such that $\displaystyle\frac{\tau(n^2)}{\tau(n)}=m$.
+\end{document}

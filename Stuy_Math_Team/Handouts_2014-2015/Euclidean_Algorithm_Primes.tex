@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+%%%%Theorem + Equation Styles%%%%%%%
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{fact}{Fact}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[subsection]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[subsection]
+
+\newenvironment{solution}
+               {\let\oldqedsymbol=\qedsymbol%
+                \def\@addpunct##1{}%
+                \renewcommand{\qedsymbol}{$\blacktriangleleft$}%
+                \begin{proof}[\bfseries\upshape Solution]}%
+               {\end{proof}%
+                \renewcommand{\qedsymbol}{\oldqedsymbol}}   %%%Taken from Evan Chen
+                
+                               
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%New Commands%%%%%%%%%
+\newcommand{\ddt}[1][t]{\frac{d}{d#1}}
+
+\newcommand{\ddtn}[2][t]{\frac{d^{#2}}{d{#1}^{#2}}}
+					
+		
+\newcommand{\pddt}[1][t]{\frac{\partial}{\partial #1}}
+
+\newcommand{\pddtn}[2][t]{\frac{\partial^{#2}}{\partial {#1}^{#2}}}
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+
+\newcommand{\nullsp}[0]{null}
+
+\newcommand{\lcm}[0]{\text{lcm}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+
+\lhead{Greatest Common Divisor}
+\rhead{\thepage}
+\cfoot{}
+
+
+\begin{document}
+
+\title{Greatest Common Divisor}
+\author{Matthew Lerner-Brecher}
+\maketitle
+
+\section{Warm-Ups}
+\begin{enumerate}
+\item Evaluate $\gcd(1881,1122)$.
+\item Show that $\frac{21n+4}{14n+3}$ is irreducible for all $n$.
+\item Show that $(a,b)[a,b]=ab$
+\item Find the greatest common divisor of $x^2+2x-3$ and $x^2+4x+3$
+\item Show that $\frac{12n+1}{30n+2}$  is irreducible for all $n$.
+\end{enumerate}
+\section{Problems}
+\begin{enumerate}
+\item Find the largest positive $n$ for which $n+10$ divides $n^3+100$.
+\item Find the number of ordered triples $(a,b,c)$ of positive integers such that $[a,b]=1000$ and $[b,c]=[c,a]=2000$
+\item Show that if 
+\begin{equation*}
+\gcd(m,n)+\lcm(m,n)=m+n
+\end{equation*}
+then one of $m,n$ divides the other.
+\item The numbers in the sequence $\displaystyle 101$, $\displaystyle 104$, $\displaystyle 109$, $\displaystyle 116$,$\displaystyle \ldots$ are of the form $\displaystyle a_n=100+n^2$, where $\displaystyle n=1,2,3,\ldots$ For each $\displaystyle n$, let $\displaystyle d_n$ be the greatest common divisor of $\displaystyle a_n$ and $\displaystyle a_{n+1}$. Find the maximum value of $\displaystyle d_n$ as $\displaystyle n$ ranges through the positive integers.
+\item Show that 
+\begin{equation*}s
+\frac{[a,b,c]^2}{[a,b][b,c][c,a]} = \frac{(a,b,c)^2}{(a,b)(b,c)(c,a)}
+\end{equation*}
+\item Find the greatest common divisor of the sequence $a_n=16^n +10n-1$
+\item Find a pair of integers $x,y$ such that $57x+33y=1$.
+\item Let $a,b,c,d$ be positive integers such that $ab=cd$. Prove that
+\begin{equation*}
+\gcd(a,c)\cdot\gcd(a,d)=a\cdot\gcd(a,b,c,d)
+\end{equation*}
+\item Find all sequences $a_1, a_2,\ldots, a_n$ that satisfy:
+\begin{equation*}
+\gcd(a_i,a_j) = \gcd(i,j)
+\end{equation*}
+for all $i\neq j$. 
+\item Find all triples of positive integers $(a,b,c)$ such that $a^3+b^3+c^3$ is divisible by $a^2b, b^2c, c^2a$.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+$\centerline{\Large \textbf{Vieta's Formula's and Newton's Sums}}$
+\\
+\\
+\\
+$\large \textbf{1)  The Formulas:}$  \\
+\\
+1) Vieta's formula's: Let $f(x)=a_nx^n+...+a_1x+a_0$ and let the roots of $f$ be $r_1,r_2,...,r_n$. If $s_i$ denotes the sum of all possible products of some $i$ roots of $f$ (for example $s_2=r_1r_2+r_1r_3+...+r_1r_n+r_2r_3+...+r_2r_n+...+r_{n-1}r_n$) then
+\begin{equation}
+s_i=(-1)^i\frac{a_{n-i}}{a_n}
+\end{equation} 
+\textit{Basic Proof Outline:}\\
+Since $f(x)=a_nx^n+...+a_1x+a_0=a_n(x-r_1)(x-r_2)...(x-r_n)$, the coefficient of $x^i$ in $a_nx^n+...+a_1x+a_0$ and $a_n(x-r_1)(x-r_2)...(x-r_n)$ have to be equal and equating the two values gives vieta's formula's.
+\\
+\\
+2) Newton's sums: Let $f(x)=a_nx^n+...+a_1x+a_0$ and let the roots of $f$ be $r_1,r_2,...,r_n$. Let $P_i=r_1^i+r_2^i+...+r_n^i$. If $i\le n$
+\begin{equation} 
+P_ia_n+P_{i-1}a_{n-1}+...+P_1a_{n-i+1}+ia_{n-i}=0
+\end{equation}
+If $i>n$ then
+\begin{equation} 
+a_nP_i+a_{n-1}P_{i-1}+...+P_{i-n+1}a_{1}+P_{i-n}a_0=0
+\end{equation}
+\textit{Basic Proof Outline:}\\
+Since $f(r_1)=f(r_2)=...=f(r_n)=0$, we have that $x^k(f(r_1)+f(r_2)+...+f(r_n))=0$ and expanding this out based on each value of $k$ (which can be negative) gives  Newton's Sums.
+\\
+\\
+$\large \textbf{2) Common Transformations:}$  \\
+For all of these we are transforming the polynomial $f$, which has roots $r_1,r_2,...,r_n$ and degree $n$ into the polynomial $g$.
+\\
+\\
+1) Polynomial with roots $r_1+a,r_2+2,...,r_n+a$: $g(x)=f(x-a)$\\
+2) Polynomial with roots $ar_1, ar_2,...,ar_n$: $g(x)=f(\frac{x}{a})$\\
+3) Polynomial with roots $\frac{1}{r_1},\frac{1}{r_2},...,\frac{1}{r_n}$: $g(x)=x^nf(\frac{1}{x})$
+\\
+\\	
+$\large \textbf{3)  Problems:}$  \\
+\\
+1) (AoPS) Find the sum of the $20^{th}$ powers of the roots of $z^{20}-19z+2$.
+\\
+\\
+2) (Purple Comet) Suppose $a,b,$ and $c$ are real numbers that satisfy $a+b+c=5$ and $\frac{1}{a}+\frac{1}{b}+\frac{1}{c}=\frac{1}{5}$. Find the greatest possible value of $a^3+b^3+c^3$. 
+\\
+\\
+\\
+\\
+3) (AIME) Let $r,s,t$ be three roots of the equation
+\begin{equation*}
+8x^3+1001x+2008
+\end{equation*}
+Find $(r+s)^3+(s+t)^3+(t+r)^3$.
+\\
+\\
+4) (PUMaC) Let $f(x)=3x^3-5x^2+2x-6$. If the roots of $f$ are given $\alpha, \beta,$ and $\gamma$, find
+\begin{equation*}
+\left ( \frac{1}{\alpha-2} \right )^2+\left ( \frac{1}{\beta-2} \right )^2+\left ( \frac{1}{\gamma-2} \right )^2
+\end{equation*} 
+\\
+5) (HMMT) The polynomial $f(x)=x^3-3x^2-4x-4$ has three real roots $r_1,r_2,$ and $r_3$. Let $g(x)=x^3+ax^2+bx+c$ be the polynomial which has roots $s_1,s_2,$ and $s_3$, where $s_1=r_1+r_2z+r_3z^2$, $s_1=r_1z+r_2z^2+r_3$, $s_1=r_1z^2+r_2+r_3z$, and $z=\frac{-1+i\sqrt{3}}{2}$. Find the real part of the sum of the coefficients of $g(x)$.
+\\
+\\
+6) (HMMT) Let $a$ and $b$ be real numbers, and let $r,s,$ and $t$ be the roots of $f(x)=x^3+ax^2+bx-1.$ Also, $g(x)=x^3+mx^2+nx+p$ has roots $r^2,s^2,$ and $t^2$. If $g(-1)=-5$, find the maximum possible value of $b$. 
+\\
+\\
+7) (HMMT) Let $a,b,c$ be the roots of $x^3-9x^2+11x-1=0$, and let $s=\sqrt{a}+\sqrt{b}+\sqrt{c}$. Find $s^4-18s^2-8s$.
+\\
+\\
+8) (OMO) Let $a,b,c$ be the roots of the cubic $x^3+3x^2+5x+7$. Given that $P$ is a cubic polynomial such that $P(a)=b+c$, $P(b)=c+a$, $P(c)=a+b$, and $P(a+b+c)=-16$, find $P(0)$.
+\\
+\\
+9) (HMMT) The complex numbers $\alpha_1,\alpha_2,\alpha_3,$ and $\alpha_4$ are the four distinct roots of the equation $x^4+2x^3+2=0$. Determine the unordered set\\
+\begin{equation*} \{ \alpha_1\alpha_2+\alpha_3\alpha_4,\alpha_1\alpha_3+\alpha_2\alpha_4,\alpha_1\alpha_4+\alpha_2\alpha_3 \}
+\end{equation*}
+\\
+10) (HMMT) How many real triples (a,b,c) are there such that the polynomial $p(x)=x^4+ax^3+bx^2+ax+c$ has exactly three distinct roots, which are equal to $\tan y$, $\tan 2y$, $\tan 3y$ for some real $y$.
+\\
+\\
+11) (Me) Let $a,b,$ and $c$ be the roots of the polynomial $x^3-7 x^2+14 x-7$. Given that $\displaystyle\sum\limits_{n=0}^{\infty} \left(\frac{a^n}{7^n(a-1)}+\frac{b^n}{7^n(b-1)}+\frac{c^n}{7^n(c-1)}\right)=-\frac{m}{n}$ for relatively prime positive integers $m,n$, find $m+n$.
+\\
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+$\centerline{\Large \textbf{Polynomials: Roots}}$
+\\
+\\
+\\
+$\large \textbf{1)  Important Facts:}$  \\
+\\
+1) If $P(a)=0$, then $(x-a)$ is a factor of $P(x)$.
+\\
+\\
+2) Vieta's formula's: Let $f(x)=a_nx^n+...+a_1x+a_0$ and let the roots of $f$ be $r_1,r_2,...,r_n$. If $s_i$ denotes the sum of all possible products of some $i$ roots of $f$ (for example $s_2=r_1r_2+r_1r_3+...+r_1r_n+r_2r_3+...+r_2r_n+...+r_{n-1}r_n$) then
+\begin{equation}
+s_i=(-1)^i\frac{a_{n-i}}{a_n}
+\end{equation} 
+\textit{Example:}\\
+If $P(x)=ax^3+bx^2+cx+d$ is a polynomial with roots $r_1,r_2,r_3$ then $r_1+r_2+r_3=-\frac{b}{a}$,  $r_1r_2+r_2r_3+r_3r_1=\frac{c}{a}$, and $r_1r_2r_3=-\frac{d}{a}$
+\\
+\\
+3) Intermediate Value Theorem: If $P$ is a polynomial (or any continuous function) then for any $y\in[P(a),P(b)]$ there exists some $x\in[a,b]$ such that $P(x)=y$.
+\\
+\\
+$\large \textbf{2)  Problems:}$  \\
+\\
+1) Let $a$ and $b$ be the roots of the equation $x^2-mx+2=0$. Suppose that $a+\frac{1}{b}$ and $b+\frac{1}{a}$ are the roots of the equation $x^2-px+q=0$. What is $q$?
+\\
+\\
+2) Find the sum of the roots, real and non-real, of the equation $x^{2001}+(\frac{1}{2}-x)^{2001}=0$ given that there are non multiple roots.
+\\
+\\
+3) Let $r,s,t$ be the roots of the equation $x^3+2x^2+3x+1$. Find
+$\frac{1}{r^2}+\frac{1}{s^2}+\frac{1}{t^2}$.
+\\
+\\
+4) Let $r,s,t$ be three roots of the equation
+\begin{equation*}
+8x^3+1001x+2008
+\end{equation*}
+Find $(r+s)^3+(s+t)^3+(t+r)^3$.
+\\
+\\
+5) $f(x)$ is a monic quartic polynomial such that $f(-1)=-1$, $f(2)=-4$, $f(-3)=-9$, and $f(4)=-16$. Find $f(1)$.
+\\
+\\
+6) Let $P(x)$ be a polynomial such that $P(1)=1$ and
+\begin{equation*}
+\frac{P(2x)}{P(x+1)}=8-\frac{56}{x+7}
+\end{equation*}
+Find $P(-1)$.
+\\
+\\
+7) Let $a,b,c$ be the roots of the cubic $x^3+3x^2+5x+7$. Given that $P$ is a cubic polynomial such that $P(a)=b+c$, $P(b)=c+a$, $P(c)=a+b$, and $P(a+b+c)=-16$, find $P(0)$.
+\\
+\\
+8) Suppose that a polynomial of the form $p(x)=x^{2010}\pm x^{2009} \pm \cdots \pm x \pm 1$ has no real roots. What is the maximum possible number of coefficients of -1 in $p$?
+\\
+\\
+9) A polynomial $P(x)$ of degree $n$ satisfies $P(k)=\displaystyle\frac{k}{k+1}$ for $k=0,1,2,\ldots,n$. Find $P(n+1)$
+\\
+\\
+10) The complex numbers $\alpha_1,\alpha_2,\alpha_3,$ and $\alpha_4$ are the four distinct roots of the equation $x^4+2x^3+2=0$. Determine the unordered set\\
+\begin{equation*} \{ \alpha_1\alpha_2+\alpha_3\alpha_4,\alpha_1\alpha_3+\alpha_2\alpha_4,\alpha_1\alpha_4+\alpha_2\alpha_3 \}
+\end{equation*}
+\\
+11) Prove that for any monic polynomial $P$ of degree $n$, there exists monic polynomials $R,S$ also of degree $n$ such that $P(x)=\frac{R(x)+S(x)}{2}$ and both $R,S$ have exactly $n$ real roots.
+\\
+\\
+12) Find all pairs of polynomials $p,q$ such that both have real coefficients and 
+\begin{equation*}
+p(x)q(x+1)-p(x+1)q(x)=1
+\end{equation*}
+\end{document}

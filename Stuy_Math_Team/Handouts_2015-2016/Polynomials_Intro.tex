@@ -1,0 +1,100 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usepackage[margin=1.25in]{geometry}
+
+%%%%Theorem + Equation Styles%%%%%%%
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Problem}
+
+\theoremstyle{remark}
+\newtheorem*{fact}{Fact}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[subsection] 
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[subsection]
+
+\newenvironment{solution}
+               {\let\oldqedsymbol=\qedsymbol%
+                \def\@addpunct##1{}%
+                \renewcommand{\qedsymbol}{$\blacktriangleleft$}%
+                \begin{proof}[\bfseries\upshape Solution]}%
+               {\end{proof}%
+                \renewcommand{\qedsymbol}{\oldqedsymbol}}   %%%Taken from Evan Chen
+                
+                               
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%New Commands%%%%%%%%%
+
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+
+\newcommand{\lcm}[0]{\text{lcm}}
+\newcommand{\cis}[0]{\text{cis}}
+\newcommand{\leg}[2]{\left( \frac{#1}{#2} \right)}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+
+\lhead{Intro to Polynomials}
+\rhead{\thepage}
+\cfoot{}
+\begin{document}
+\begin{center} 
+        \Large \textbf{Polynomials: Intro}
+\end{center}
+\section{Main Ideas}
+\begin{enumerate}
+\item (Conjugate Root Theorem) Suppose $P$ is a polynomial with real coefficients. If $P(z)=0$, then $P(\overline{z})=0$
+\item (Rational Root Theorem) Given $P(x) = a_n x^n + a_{n - 1}x^{n - 1} + \ldots + a_1 x + a_0$ with integral coefficients, $a_n \neq 0$. If $P(x)$ has a rational root $r = \pm\frac{p}{q}$ with $p, q$ relatively prime positive integers, $p$ is a divisor of $a_0$ and $q$ is a divisor of $a_n$.
+\item  (Vieta's Formula's) Let $f(x)=a_nx^n+...+a_1x+a_0$ and let the roots of $f$ be $r_1,r_2,...,r_n$. If $s_i$ denotes the sum of all possible products of some $i$ roots of $f$ (for example $s_2=r_1r_2+r_1r_3+...+r_1r_n+r_2r_3+...+r_2r_n+...+r_{n-1}r_n$) then
+\begin{equation*}
+s_i=(-1)^i\frac{a_{n-i}}{a_n}
+\end{equation*} 
+\end{enumerate}
+\section{Problems}
+\begin{enumerate}
+\item Let $a,b,c$ be the roots of $2x^3-3x^2+4x-5$.
+\begin{enumerate}
+\item (Warm-up) Find $a+b+c$, $ab + bc + ca$, and $abc$
+\item Find $\frac{1}{a}+\frac{1}{b}+\frac{1}{c}$.
+\item Find $a^2+b^2+c^2$
+\item Find $a^2b+b^2a+b^2c+c^2b+c^2a+a^2c$
+\item Find $a^3+b^3+c^3$
+\item (Challenge) Find $\frac{1}{(a-2)^2}+\frac{1}{(b-2)^2}+\frac{1}{(c-2)^2}$
+\end{enumerate}
+\item Determine all rational roots of $7x^4-8x^3-6x^2-13x+2$.
+\item Let $ P(z) = z^3 + az^2 + bz + c$, where $ a$, $ b$, and $ c$ are real. There exists a complex number $ w$ such that the three roots of $ P(z)$ are $ w + 3i$, $ w + 9i$, and $ 2w - 4$, where $ i^2 = - 1$. Find $ |a + b + c|$.
+\item Prove that $\sqrt{2}$ is irrational.
+\item The polynomial $f(x)=x^4+ax^3+bx^2+cx+d$ has real coefficients and satisfies $f(2i)=f(2+i)=1$. Find $a+b+c+d$.
+\item Let $r,s,t$ be three roots of the equation
+\begin{equation*}
+8x^3+1001x+2008
+\end{equation*}
+Find $(r+s)^3+(s+t)^3+(t+r)^3$.
+\item Consider the polynomial $P(x)=x^3+x^2-x+2$. Determine all real numbers $r$ for which there exists a complex number $z$ not in the reals such that $P(z)=r$.
+\item Let $a,b,c$ be the roots of the cubic $x^3+3x^2+5x+7$. Given that $P$ is a cubic polynomial such that $P(a)=b+c$, $P(b)=c+a$, $P(c)=a+b$, and $P(a+b+c)=-16$, find $P(0)$.
+\item Prove that the sum
+\begin{equation*}
+\sqrt{1000^2+1} + \sqrt{1001^2+1} + \cdots + \sqrt{2000^2+1}
+\end{equation*}
+is irrational
+\item The complex numbers $\alpha_1, \alpha_2, \alpha_3, \alpha_4$ are the four distinct roots of the equation $x^4+2x^3+2=0$. Determine the unordered set 
+\begin{equation*}
+\{\alpha_1\alpha_2 + \alpha_3\alpha_4, \alpha_1\alpha_3 + \alpha_2\alpha_4, \alpha_1\alpha_4 + \alpha_2\alpha_3\}\
+\end{equation*}
+\item Find all monic polynomials $f(x)$ with integer coefficients such that $f(0)=2004$ and if $x$ is irrational so is $f(x)$.
+\end{enumerate}
+\end{document}

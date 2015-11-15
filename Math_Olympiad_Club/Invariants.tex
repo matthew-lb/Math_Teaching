@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin=1.6in]{geometry}
+\newcommand{\lcm}{lcm }
+\begin{document}
+$\centerline{\Large \textbf{Invariants and Monovariants}}$
+\\
+\\
+\\
+1) Suppose n is odd, and the numbers $1, 2,\ldots, 2$n are written on the blackboard. I repeatedly pick two arbitrary numbers on the blackboard $a$ and $b$, erase them, and write $\left|a - b\right|$ instead. This continues until only one integer is left. Is the number at the end odd or even?
+\\
+\\
+2) The numbers $3,4,12$ are written on a blackboard. In each step you may chose two of the numbers $a,b$ and replace them with the numbers $.6a-.8b$ and $.8a+.6b$. Is it possible to reach $4,6,12$ after finitely many steps?
+\\
+\\
+3) Start with a finite sequence $a_1,a_2,\ldots,a_n$ of positive integers. If possible choose two indices such that $a_j$ does not divide $a_k$ and rep ace $a_j$ and $a_k$ by $\gcd(a_j,a_k)$ and $\lcm(a_j,a_k)$ respectively. Prove that if this process is repeated, it must eventually stop.
+\\
+\\
+4) (NIMO Winter 2014) The numbers $1,2,\ldots,10$ are written on a board. Every minute, one can select three numbers $a,b,c$ on the board, erase them, and write $\sqrt{a^2+b^2+c^2}$ in their place. This process continues until no more numbers can be erased. What is the largest possible number that can remain on the board at this point?
+\\
+\\
+5) Several stones are placed on an infinite (in both directions) strip of squares. As long as there are at least two stones on a single square, you may pick up two such stones, then
+move one to the preceding square and one to the following square. Is it possible to return to the starting configuration after a finite sequence of such moves?
+\\
+\\
+6) (USAMO 1993) Let $a,b$ be odd positive integers. Define the sequence $(f_n)$ by putting $f_1=a$,$f_2=b$ and by letting $f_n$ for $n\ge 3$ be the greatest odd divisor of $f_{n_1}+f_{n-2}$. Show that $f_n$ is constant for $n$ sufficiently large and determine the eventual value as a function of $a$ and $b$.
+\\
+\\
+7) (St. Petersburg 1997) The number $99\ldots99$ (with 1997 nines) is written on a blackboard. Each minute, one number written on the blackboard is factored into two factors, each factor is (independently) increased or decreased by 2, and the resulting two numbers are written. Is it possible to have all the numbers on the board be 9 at some point?
+\\
+\\
+8) (Germany Pre-TST 2009) Initially one positive integer is written on the board. At the end of every minute, if the number $x$ is written on the board, then we may additionally write the numbers $2x+1$ and $\frac{x}{x+2}$ on the board. Prove that if the number 2008 is on the board at some point, then it was the number initially written on the board.
+\\
+\\
+9) (BAMO 2006) We have $k$ switches arranged in a row, and each switch points up down, left, or right. Whenever three successive switches all point in different directions, all three may be simultaneously turned so as to point in the fourth direction. Prove that this operation cannot be repeated infinitely many times.
+\end{document}
